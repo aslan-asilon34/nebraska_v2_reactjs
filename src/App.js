@@ -11,7 +11,6 @@ function App() {
         <Routes>
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          {/* Add other routes here as needed */}
         </Routes>
       </div>
     </Router>
