@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 36" width="120" height="36">
+	<title>logo-svg</title>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 18px;fill: #000000;font-weight: 800;font-family: "Poppins-ExtraBold", "Poppins" } 
+	</style>
+	<text id="Nebraska V2" style="transform: matrix(1,0,0,1,0,27)" >
+		<tspan x="0" y="0" class="t0">N</tspan><tspan  y="0" class="t0">e</tspan><tspan  y="0" class="t0">b</tspan><tspan  y="0" class="t0">r</tspan><tspan  y="0" class="t0">a</tspan><tspan  y="0" class="t0">s</tspan><tspan  y="0" class="t0">k</tspan><tspan  y="0" class="t0">a</tspan><tspan  y="0" class="t0"> </tspan><tspan  y="0" class="t0">V</tspan><tspan  y="0" class="t0">2</tspan><tspan  y="0" class="t0">
+</tspan>
+	</text>
+</svg>

@@ -1,0 +1,46 @@
+// Core (Custom files)
+@import "core/custom-mixins";
+@import "core/custom-variables";
+
+$min-contrast-ratio: 2;
+
+// Bootstrap 5
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+// Custom color palette
+@import "core/custom-color-palette";
+
+// Components
+@import "components/body";
+@import "components/header";
+@import "components/preloader";
+@import "components/form-wizard";
+@import "components/lightbox";
+@import "components/card";
+@import "components/dropdown";
+@import "components/datepicker";
+@import "components/tour";
+@import "components/sweet-alert";
+@import "components/range-slider";
+@import "components/select2";
+@import "components/avatar";
+@import "components/file-upload";
+@import "components/authentication";
+@import "components/chat";
+@import "components/table";
+@import "components/nestable";
+@import "components/menu";
+@import "components/sidebar";
+@import "components/footer";
+@import "components/demo";
+
+// Menu styles
+@import "menu/top-menu";
+@import "menu/hidden-menu";
+
+// Other
+@import "layouts";
+@import "dark";
+@import "responsive";
+@import "print";
+@import "other";

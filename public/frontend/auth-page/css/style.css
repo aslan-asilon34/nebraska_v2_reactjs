@@ -1,0 +1,697 @@
+/*======== All styles ==========*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #eaeaea;
+}
+
+.wave {
+  position: fixed;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10rem;
+  padding: 0 2rem;
+  overflow-x: hidden;
+}
+
+.img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.img img {
+  width: 500px;
+  position: relative;
+  animation-name: left-to-right;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  animation-name: right-to-left;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+}
+
+.forgot {
+  padding-bottom: 10px;
+}
+
+form {
+  width: 400px;
+  padding: 1.2rem;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+}
+
+form h2 {
+  font-size: 1.8rem;
+  margin: 5px 0;
+}
+
+.input-div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 7% 93%;
+  margin: 20px 0;
+  padding: 5px 0;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.input-div::after,
+.input-div::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #8B5CF6;
+  transition: 0.3s;
+}
+
+.input-div::after {
+  right: 50%;
+}
+
+.input-div::before {
+  left: 50%;
+}
+
+.input-div.focus .i i {
+  color: #8B5CF6;
+}
+
+.input-div.focus div h5 {
+  top: -5px;
+  font-size: 15px;
+}
+
+.input-div.focus::after,
+.input-div.focus::before {
+  width: 50%;
+}
+
+.input-div .one {
+  margin-top: 0;
+}
+
+.input-div .two {
+  margin-bottom: 4px;
+}
+
+.i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.i i {
+  color: #d9d9d9;
+  transition: 0.3s;
+}
+
+.input-div>div {
+  position: relative;
+  height: 40px;
+}
+
+.input-div>div h5 {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  color: #555;
+}
+
+a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #616161;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #8B5CF6;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 15px;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  background-image: linear-gradient(to right, #8B5CF6, #8B5CF6, #8B5CF6);
+  color: #eaeaea;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  background-size: 200%;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-position: right;
+}
+
+.social-icons {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 5px 0;
+  height: 40px;
+}
+
+.social-icons img {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.social-icons.google {
+  padding-right: 24px;
+}
+
+.facebook {
+  background-image: linear-gradient(to right, #3b5998, #1976d2, #3b5998);
+  border-radius: 15px;
+}
+
+.facebook a{
+  color: #fff;
+  /* width: 100%; */
+
+}
+
+.facebook a img{
+  color: #fff;
+  /* width: 100%; */
+  width: 50px;
+
+}
+
+.github {
+  background-image: linear-gradient(to right, #262627, #262627, #1b1c1d);
+  border-radius: 15px;
+}
+
+.github a{
+  color: #fff;
+  /* width: 100%; */
+
+}
+
+.github a img{
+  color: #fff;
+  /* width: 100%; */
+  width: 50px;
+
+}
+
+.twitter {
+  background-image: linear-gradient(to right, #262627, #262627, #1b1c1d);
+  border-radius: 15px;
+}
+
+.twitter a{
+  color: #fff;
+  /* width: 100%; */
+
+}
+
+.twitter a img{
+  color: #fff;
+  /* width: 100%; */
+  width: 50px;
+
+}
+
+.discord {
+  background-image: linear-gradient(to right, #9292ee, #9292ee, #9292ee);
+  border-radius: 15px;
+}
+
+.discord a{
+  color: #fff;
+  /* width: 100%; */
+
+}
+
+.discord a img{
+  color: #fff;
+  /* width: 100%; */
+  width: 50px;
+
+}
+
+.google {
+  background-color: #eaeaea;
+  border-radius: 15px;
+}
+
+.google a img{
+  /* width: 100%; */
+  width: 50px;
+}
+
+.google a:hover {
+  color: #8B5CF6;
+}
+
+.account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.account p {
+  margin: 0.5rem;
+}
+
+.terms {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin: 0px 10px 15px 0px;
+}
+
+.terms a {
+  color: #8B5CF6;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.terms input {
+  margin-right: 10px;
+}
+
+.others {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.others hr {
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+}
+
+.others p {
+  padding: 0 10px;
+}
+
+.confirm-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  animation-name: right-to-left;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+}
+
+.content {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 1.2rem;
+  box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.2);
+}
+
+.content h2 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+.fa-check-circle {
+  font-size: 50px;
+  border-radius: 100%;
+  color: #fff;
+  background-color: #addb31;
+  margin: 5px 0 25px;
+  position: relative;
+  animation-name: confirm-animation;
+  animation-duration: 4s;
+  animation-delay: 0.5s;
+}
+
+.fa-exclamation-circle {
+  font-size: 50px;
+  color: #8B5CF6;
+  background-color: #fff;
+  margin: 5px 0 25px;
+  position: relative;
+  animation-name: error-animation;
+  animation-duration: 4s;
+  animation-delay: 0.5s;
+}
+
+.btn-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.btn-action {
+  width: 100%;
+  background-image: linear-gradient(to right, #8B5CF6, #8B5CF6, #8B5CF6);
+  color: #eeeeee;
+  border-radius: 15px;
+  height: 40px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  background-size: 200%;
+}
+
+.btn-action:hover {
+  color: #eaeaea;
+  background-position: right;
+}
+
+/* ================ Modal ====================== */
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding: 30px 0;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 15px;
+  width: 75%;
+}
+
+.modal-content h2 {
+  padding-bottom: 20px;
+}
+
+.modal-content p {
+  text-align: left;
+}
+
+.modal-content span {
+  color: #8B5CF6;
+}
+
+.modal-content span:hover {
+  color: #8B5CF6;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =============== Keyframes for animations ==============*/
+
+@keyframes left-to-right {
+  0% {
+    left: -500px;
+    top: 0;
+  }
+
+  25% {
+    left: 0px;
+    top: 0;
+  }
+
+  50% {
+    left: 0px;
+    top: 0;
+  }
+
+  75% {
+    left: 0px;
+    top: 0;
+  }
+
+  100% {
+    left: 0px;
+    top: 0;
+  }
+}
+
+@keyframes right-to-left {
+  0% {
+    left: 500px;
+    top: 0;
+  }
+
+  25% {
+    left: 0px;
+    top: 0;
+  }
+
+  50% {
+    left: 0px;
+    top: 0;
+  }
+
+  75% {
+    left: 0px;
+    top: 0;
+  }
+
+  100% {
+    left: 0px;
+    top: 0;
+  }
+}
+
+@keyframes confirm-animation {
+  0% {
+    background-color: #addb31;
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    background-color: #addb31;
+    left: 0px;
+    top: 0px;
+    font-size: 80px;
+  }
+
+  50% {
+    background-color: #addb31;
+    left: 0px;
+    top: 0px;
+    font-size: 50px;
+  }
+
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 0px;
+    font-size: 80px;
+  }
+
+  100% {
+    background-color: #addb31;
+    left: 0px;
+    top: 0px;
+    font-size: 80px;
+  }
+}
+
+@keyframes error-animation {
+  0% {
+    color: #8B5CF6;
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    color: #8B5CF6;
+    left: 0px;
+    top: 0px;
+    font-size: 80px;
+  }
+
+  50% {
+    color: #8B5CF6;
+    left: 0px;
+    top: 0px;
+    font-size: 50px;
+  }
+
+  75% {
+    color: #8B5CF6;
+    left: 0px;
+    top: 0px;
+    font-size: 80px;
+  }
+
+  100% {
+    color: #8B5CF6;
+    left: 0px;
+    top: 0px;
+    font-size: 80px;
+  }
+}
+
+/* =============== End Keyframes ===============*/
+
+/* =============== Media Query for Responsive =============*/
+
+@media (max-width: 1050px) {
+  .container {
+    column-gap: 5rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  form {
+    width: 350px;
+  }
+
+  form h2 {
+    font-size: 1.5rem;
+    margin: 8px 0;
+  }
+
+  .img img {
+    width: 400px;
+  }
+
+  .content {
+    width: 350px;
+  }
+}
+
+@media (max-width: 900px) {
+  .img {
+    display: none;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    background-color: #8B5CF6;
+  }
+
+  .wave {
+    display: none;
+  }
+
+  .login-container {
+    justify-content: center;
+  }
+
+  .confirm-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  form {
+    width: 300px;
+    margin: 1rem 0;
+  }
+
+  .terms {
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .terms a {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .terms input {
+    margin-top: 5px;
+    align-self: start;
+  }
+
+  .content {
+    width: 300px;
+  }
+}
+
+@media (min-width: 600px) {
+  .terms a {
+    padding-left: 5px;
+  }
+}
+
+/* ============== End Media Query for Responsive ============ */
